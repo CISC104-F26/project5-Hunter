@@ -1,0 +1,31 @@
+[gd_scene format=3 uid="uid://8u08r54j4wu7"]
+
+[node name="GameUi" type="Control" unique_id=935865849]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1617186762]
+visible = false
+zoom = Vector2(0.5, 0.5)
+
+[node name="Button" type="Button" parent="." unique_id=974243128]
+layout_mode = 0
+offset_left = -205.0
+offset_top = 511.0
+offset_right = 209.0
+offset_bottom = 635.0
+theme_override_font_sizes/font_size = 80
+text = "Rock-Dex"
+
+[node name="LineEdit" type="LineEdit" parent="." unique_id=981712906]
+layout_mode = 0
+offset_left = -1139.0
+offset_top = 572.0
+offset_right = -694.0
+offset_bottom = 635.0
+theme_override_font_sizes/font_size = 40
+placeholder_text = "Enter Codes Here..."

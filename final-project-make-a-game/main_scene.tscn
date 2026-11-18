@@ -2,14 +2,71 @@
 
 [ext_resource type="Script" uid="uid://hnfubwooqarq" path="res://player.gd" id="1_2c62f"]
 [ext_resource type="Texture2D" uid="uid://cjvlkx0d4uk7f" path="res://icon.svg" id="2_gyfs4"]
+[ext_resource type="PackedScene" uid="uid://c8q280uhef2ib" path="res://index.tscn" id="3_d5x1h"]
+[ext_resource type="Texture2D" uid="uid://d02ik5j8d1fj4" path="res://Screenshot 2025-03-10 235007.png" id="3_gyfs4"]
+[ext_resource type="Script" uid="uid://rdmvnp83mat1" path="res://camera_2d.gd" id="3_hq1ik"]
+[ext_resource type="PackedScene" uid="uid://8u08r54j4wu7" path="res://game_ui.tscn" id="5_8mm7a"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_g4gaj"]
+size = Vector2(21, 675)
+
+[sub_resource type="BoxMesh" id="BoxMesh_ra2i3"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2c62f"]
+size = Vector2(1804, 25)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ra2i3"]
 size = Vector2(128, 128)
 
+[sub_resource type="FontFile" id="FontFile_hq1ik"]
+cache/0/variation_coordinates = {}
+cache/0/face_index = 0
+cache/0/embolden = 0.0
+cache/0/transform = Transform2D(1, 0, 0, 1, 0, 0)
+cache/0/spacing_top = 0
+cache/0/spacing_bottom = 0
+cache/0/spacing_space = 0
+cache/0/spacing_glyph = 0
+cache/0/baseline_offset = 0.0
+cache/0/16/0/ascent = 0.0
+cache/0/16/0/descent = 0.0
+cache/0/16/0/underline_position = 0.0
+cache/0/16/0/underline_thickness = 0.0
+cache/0/16/0/scale = 1.0
+
+[sub_resource type="TextMesh" id="TextMesh_ra2i3"]
+text = "Dingus Playgound"
+font = SubResource("FontFile_hq1ik")
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_otjlk"]
+size = Vector2(73, 72.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gyfs4"]
+size = Vector2(146, 163)
+
 [node name="Node2D" type="Node2D" unique_id=236159428]
 
+[node name="Static Body Folder" type="Node" parent="." unique_id=2091817908]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Static Body Folder" unique_id=90933740]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Static Body Folder/StaticBody2D" unique_id=2027653812]
+position = Vector2(0.5, 327.5)
+shape = SubResource("RectangleShape2D_g4gaj")
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="Static Body Folder" unique_id=1494731567]
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="Static Body Folder/StaticBody2D2" unique_id=695532369]
+position = Vector2(884, 648.625)
+scale = Vector2(1804, 25.249975)
+mesh = SubResource("BoxMesh_ra2i3")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Static Body Folder/StaticBody2D2" unique_id=1036119855]
+position = Vector2(883, 647.5)
+shape = SubResource("RectangleShape2D_2c62f")
+
 [node name="Player" type="CharacterBody2D" parent="." unique_id=762714921]
-position = Vector2(505, 440)
+position = Vector2(575, 323)
 script = ExtResource("1_2c62f")
 
 [node name="Sprite2D" type="Sprite2D" parent="Player" unique_id=1784517068]
@@ -19,3 +76,47 @@ texture = ExtResource("2_gyfs4")
 shape = SubResource("RectangleShape2D_ra2i3")
 
 [node name="Camera2D" type="Camera2D" parent="Player" unique_id=895102182]
+zoom = Vector2(0.5, 0.5)
+script = ExtResource("3_hq1ik")
+
+[node name="Index" parent="Player" unique_id=990437416 instance=ExtResource("3_d5x1h")]
+visible = false
+offset_left = -0.7279663
+offset_top = 1.3240051
+offset_right = -0.7279663
+offset_bottom = 1.3240051
+
+[node name="GameUi" parent="Player" unique_id=935865849 instance=ExtResource("5_8mm7a")]
+
+[node name="Button" parent="Player/GameUi" index="1" unique_id=974243128]
+toggle_mode = true
+action_mode = 0
+
+[node name="Text" type="MeshInstance2D" parent="." unique_id=1615888461]
+position = Vector2(680, 147)
+scale = Vector2(508.8354, -406.24985)
+mesh = SubResource("TextMesh_ra2i3")
+
+[node name="Secret1" type="Area2D" parent="." unique_id=1809021317]
+
+[node name="Sprite2D" type="Sprite2D" parent="Secret1" unique_id=1580850410]
+position = Vector2(1355, 594.5)
+scale = Vector2(0.2078653, 0.18387912)
+texture = ExtResource("3_gyfs4")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Secret1" unique_id=426927791]
+position = Vector2(1354.5, 594.25)
+shape = SubResource("RectangleShape2D_otjlk")
+
+[node name="Secret2" type="Area2D" parent="." unique_id=886892439]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Secret2" unique_id=918984723]
+position = Vector2(1618, 498)
+shape = SubResource("RectangleShape2D_gyfs4")
+
+[connection signal="toggled" from="Player/GameUi/Button" to="Player" method="_on_button_toggled"]
+[connection signal="body_entered" from="Secret1" to="Player" method="_on_secret_1_body_entered"]
+[connection signal="body_entered" from="Secret2" to="Player" method="_on_secret_2_body_entered"]
+
+[editable path="Player/Index"]
+[editable path="Player/GameUi"]

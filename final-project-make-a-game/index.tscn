@@ -1,0 +1,394 @@
+[gd_scene format=3 uid="uid://c8q280uhef2ib"]
+
+[ext_resource type="Texture2D" uid="uid://d02ik5j8d1fj4" path="res://Screenshot 2025-03-10 235007.png" id="1_356j3"]
+
+[node name="Index" type="Control" unique_id=990437416]
+layout_mode = 3
+anchor_left = -0.99700004
+anchor_top = -1.001
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 1148.5441
+offset_top = 648.648
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Background" type="ColorRect" parent="." unique_id=1150143505]
+z_index = 10
+layout_mode = 0
+offset_left = -1092.0
+offset_top = -594.0
+offset_right = 1083.0
+offset_bottom = 554.0
+color = Color(0.6955032, 0.6955031, 0.6955031, 0.5294118)
+
+[node name="RockLabel2" type="ColorRect" parent="Background" unique_id=2128077513]
+z_index = 10
+layout_mode = 0
+offset_left = 1074.0
+offset_top = 41.0
+offset_right = 2026.0
+offset_bottom = 301.0
+
+[node name="Name" type="RichTextLabel" parent="Background/RockLabel2" unique_id=176814867]
+layout_mode = 0
+offset_left = 16.0
+offset_top = 16.0
+offset_right = 579.0
+offset_bottom = 108.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/normal_font_size = 60
+text = "Hidden Rock"
+horizontal_alignment = 1
+
+[node name="Hint" type="RichTextLabel" parent="Background/RockLabel2" unique_id=1351970339]
+layout_mode = 0
+offset_left = 14.0
+offset_top = 117.0
+offset_right = 686.0
+offset_bottom = 249.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/normal_font_size = 30
+text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Texture" type="TextureRect" parent="Background/RockLabel2" unique_id=658633529]
+layout_mode = 0
+offset_left = 703.0
+offset_top = 11.0
+offset_right = 939.25946
+offset_bottom = 247.0
+texture = ExtResource("1_356j3")
+expand_mode = 1
+
+[node name="Difficulty" type="TextureRect" parent="Background/RockLabel2" unique_id=357171431]
+layout_mode = 0
+offset_left = 594.0
+offset_top = 11.0
+offset_right = 688.1034
+offset_bottom = 105.0
+texture = ExtResource("1_356j3")
+expand_mode = 1
+
+[node name="Deco" type="ColorRect" parent="Background/RockLabel2" unique_id=1622694996]
+layout_mode = 0
+offset_left = 36.0
+offset_top = 98.0
+offset_right = 560.0
+offset_bottom = 104.0
+color = Color(0, 0, 0, 1)
+
+[node name="RockLabel1" type="ColorRect" parent="Background" unique_id=878194987]
+z_index = 10
+layout_mode = 0
+offset_left = 38.0
+offset_top = 41.0
+offset_right = 990.0
+offset_bottom = 301.0
+
+[node name="Name" type="RichTextLabel" parent="Background/RockLabel1" unique_id=1430700392]
+z_index = 10
+layout_mode = 0
+offset_left = 16.0
+offset_top = 16.0
+offset_right = 579.0
+offset_bottom = 108.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/normal_font_size = 60
+text = "Hidden Rock"
+horizontal_alignment = 1
+
+[node name="Hint" type="RichTextLabel" parent="Background/RockLabel1" unique_id=220656046]
+z_index = 10
+layout_mode = 0
+offset_left = 14.0
+offset_top = 117.0
+offset_right = 686.0
+offset_bottom = 249.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/normal_font_size = 30
+text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Texture" type="TextureRect" parent="Background/RockLabel1" unique_id=1439845043]
+z_index = 10
+layout_mode = 0
+offset_left = 703.0
+offset_top = 11.0
+offset_right = 939.25946
+offset_bottom = 247.0
+texture = ExtResource("1_356j3")
+expand_mode = 1
+
+[node name="Difficulty" type="TextureRect" parent="Background/RockLabel1" unique_id=166162343]
+z_index = 10
+layout_mode = 0
+offset_left = 594.0
+offset_top = 11.0
+offset_right = 688.1034
+offset_bottom = 105.0
+texture = ExtResource("1_356j3")
+expand_mode = 1
+
+[node name="Deco" type="ColorRect" parent="Background/RockLabel1" unique_id=1353083150]
+z_index = 10
+layout_mode = 0
+offset_left = 36.0
+offset_top = 98.0
+offset_right = 560.0
+offset_bottom = 104.0
+color = Color(0, 0, 0, 1)
+
+[node name="RockLabel3" type="ColorRect" parent="Background" unique_id=1117493185]
+z_index = 10
+layout_mode = 0
+offset_left = 39.0
+offset_top = 369.0
+offset_right = 991.0
+offset_bottom = 629.0
+
+[node name="Name" type="RichTextLabel" parent="Background/RockLabel3" unique_id=1251119707]
+z_index = 10
+layout_mode = 0
+offset_left = 16.0
+offset_top = 16.0
+offset_right = 579.0
+offset_bottom = 108.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/normal_font_size = 60
+text = "Hidden Rock"
+horizontal_alignment = 1
+
+[node name="Hint" type="RichTextLabel" parent="Background/RockLabel3" unique_id=1699216527]
+z_index = 10
+layout_mode = 0
+offset_left = 14.0
+offset_top = 117.0
+offset_right = 686.0
+offset_bottom = 249.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/normal_font_size = 30
+text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Texture" type="TextureRect" parent="Background/RockLabel3" unique_id=535968954]
+z_index = 10
+layout_mode = 0
+offset_left = 703.0
+offset_top = 11.0
+offset_right = 939.25946
+offset_bottom = 247.0
+texture = ExtResource("1_356j3")
+expand_mode = 1
+
+[node name="Difficulty" type="TextureRect" parent="Background/RockLabel3" unique_id=591429785]
+z_index = 10
+layout_mode = 0
+offset_left = 594.0
+offset_top = 11.0
+offset_right = 688.1034
+offset_bottom = 105.0
+texture = ExtResource("1_356j3")
+expand_mode = 1
+
+[node name="Deco" type="ColorRect" parent="Background/RockLabel3" unique_id=840710899]
+z_index = 10
+layout_mode = 0
+offset_left = 36.0
+offset_top = 98.0
+offset_right = 560.0
+offset_bottom = 104.0
+color = Color(0, 0, 0, 1)
+
+[node name="RockLabel4" type="ColorRect" parent="Background" unique_id=1898159251]
+z_index = 10
+layout_mode = 0
+offset_left = 1074.0
+offset_top = 369.0
+offset_right = 2026.0
+offset_bottom = 629.0
+
+[node name="Name" type="RichTextLabel" parent="Background/RockLabel4" unique_id=41366260]
+z_index = 10
+layout_mode = 0
+offset_left = 16.0
+offset_top = 16.0
+offset_right = 579.0
+offset_bottom = 108.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/normal_font_size = 60
+text = "Hidden Rock"
+horizontal_alignment = 1
+
+[node name="Hint" type="RichTextLabel" parent="Background/RockLabel4" unique_id=817188216]
+z_index = 10
+layout_mode = 0
+offset_left = 14.0
+offset_top = 117.0
+offset_right = 686.0
+offset_bottom = 249.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/normal_font_size = 30
+text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Texture" type="TextureRect" parent="Background/RockLabel4" unique_id=734644113]
+z_index = 10
+layout_mode = 0
+offset_left = 703.0
+offset_top = 11.0
+offset_right = 939.25946
+offset_bottom = 247.0
+texture = ExtResource("1_356j3")
+expand_mode = 1
+
+[node name="Difficulty" type="TextureRect" parent="Background/RockLabel4" unique_id=1289913302]
+z_index = 10
+layout_mode = 0
+offset_left = 594.0
+offset_top = 11.0
+offset_right = 688.1034
+offset_bottom = 105.0
+texture = ExtResource("1_356j3")
+expand_mode = 1
+
+[node name="Deco" type="ColorRect" parent="Background/RockLabel4" unique_id=189838408]
+z_index = 10
+layout_mode = 0
+offset_left = 36.0
+offset_top = 98.0
+offset_right = 560.0
+offset_bottom = 104.0
+color = Color(0, 0, 0, 1)
+
+[node name="RockLabel5" type="ColorRect" parent="Background" unique_id=976375325]
+z_index = 10
+layout_mode = 0
+offset_left = 39.0
+offset_top = 691.0
+offset_right = 991.0
+offset_bottom = 951.0
+
+[node name="Name" type="RichTextLabel" parent="Background/RockLabel5" unique_id=470245914]
+z_index = 10
+layout_mode = 0
+offset_left = 16.0
+offset_top = 16.0
+offset_right = 579.0
+offset_bottom = 108.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/normal_font_size = 60
+text = "Hidden Rock"
+horizontal_alignment = 1
+
+[node name="Hint" type="RichTextLabel" parent="Background/RockLabel5" unique_id=1610947722]
+z_index = 10
+layout_mode = 0
+offset_left = 14.0
+offset_top = 117.0
+offset_right = 686.0
+offset_bottom = 249.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/normal_font_size = 30
+text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Texture" type="TextureRect" parent="Background/RockLabel5" unique_id=1161521848]
+z_index = 10
+layout_mode = 0
+offset_left = 703.0
+offset_top = 11.0
+offset_right = 939.25946
+offset_bottom = 247.0
+texture = ExtResource("1_356j3")
+expand_mode = 1
+
+[node name="Difficulty" type="TextureRect" parent="Background/RockLabel5" unique_id=690102687]
+z_index = 10
+layout_mode = 0
+offset_left = 594.0
+offset_top = 11.0
+offset_right = 688.1034
+offset_bottom = 105.0
+texture = ExtResource("1_356j3")
+expand_mode = 1
+
+[node name="Deco" type="ColorRect" parent="Background/RockLabel5" unique_id=310465930]
+z_index = 10
+layout_mode = 0
+offset_left = 36.0
+offset_top = 98.0
+offset_right = 560.0
+offset_bottom = 104.0
+color = Color(0, 0, 0, 1)
+
+[node name="RockLabel6" type="ColorRect" parent="Background" unique_id=1965236214]
+z_index = 10
+layout_mode = 0
+offset_left = 1074.0
+offset_top = 691.0
+offset_right = 2026.0
+offset_bottom = 951.0
+
+[node name="Name" type="RichTextLabel" parent="Background/RockLabel6" unique_id=1894490627]
+z_index = 10
+layout_mode = 0
+offset_left = 16.0
+offset_top = 16.0
+offset_right = 579.0
+offset_bottom = 108.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/normal_font_size = 60
+text = "Hidden Rock"
+horizontal_alignment = 1
+
+[node name="Hint" type="RichTextLabel" parent="Background/RockLabel6" unique_id=666128031]
+z_index = 10
+layout_mode = 0
+offset_left = 14.0
+offset_top = 117.0
+offset_right = 686.0
+offset_bottom = 249.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/normal_font_size = 30
+text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Texture" type="TextureRect" parent="Background/RockLabel6" unique_id=943759945]
+z_index = 10
+layout_mode = 0
+offset_left = 703.0
+offset_top = 11.0
+offset_right = 939.25946
+offset_bottom = 247.0
+texture = ExtResource("1_356j3")
+expand_mode = 1
+
+[node name="Difficulty" type="TextureRect" parent="Background/RockLabel6" unique_id=875621184]
+z_index = 10
+layout_mode = 0
+offset_left = 594.0
+offset_top = 11.0
+offset_right = 688.1034
+offset_bottom = 105.0
+texture = ExtResource("1_356j3")
+expand_mode = 1
+
+[node name="Deco" type="ColorRect" parent="Background/RockLabel6" unique_id=92838583]
+z_index = 10
+layout_mode = 0
+offset_left = 36.0
+offset_top = 98.0
+offset_right = 560.0
+offset_bottom = 104.0
+color = Color(0, 0, 0, 1)
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1294556865]
+visible = false
+zoom = Vector2(0.5, 0.5)

@@ -1,0 +1,27 @@
+[gd_scene format=3 uid="uid://ulcpfp7hk8qd"]
+
+[node name="Menu" type="Control" unique_id=391373488]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Logo [REPLACE]" type="Label" parent="." unique_id=1358562970]
+layout_mode = 0
+offset_left = 349.0
+offset_top = 102.0
+offset_right = 828.0
+offset_bottom = 185.0
+theme_override_font_sizes/font_size = 60
+text = "FIND THE ROCKS"
+
+[node name="Button" type="Button" parent="." unique_id=906162230]
+layout_mode = 0
+offset_left = 429.0
+offset_top = 406.0
+offset_right = 672.0
+offset_bottom = 551.0
+theme_override_font_sizes/font_size = 100
+text = "Start"
