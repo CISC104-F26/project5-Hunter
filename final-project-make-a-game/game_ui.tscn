@@ -12,7 +12,7 @@ grow_vertical = 2
 visible = false
 zoom = Vector2(0.5, 0.5)
 
-[node name="Button" type="Button" parent="." unique_id=974243128]
+[node name="IndexButton" type="Button" parent="." unique_id=974243128]
 layout_mode = 0
 offset_left = -205.0
 offset_top = 511.0
