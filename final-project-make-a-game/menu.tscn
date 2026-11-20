@@ -7,8 +7,6 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-metadata/_edit_horizontal_guides_ = [89.0]
-metadata/_edit_vertical_guides_ = [329.0]
 
 [node name="Logo [REPLACE]" type="Label" parent="." unique_id=1358562970]
 z_index = 16

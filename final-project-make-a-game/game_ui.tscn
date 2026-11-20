@@ -9,17 +9,26 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1617186762]
-visible = false
 zoom = Vector2(0.5, 0.5)
 
 [node name="IndexButton" type="Button" parent="." unique_id=974243128]
 layout_mode = 0
-offset_left = -205.0
+offset_left = -197.0
 offset_top = 511.0
-offset_right = 209.0
+offset_right = 196.0
 offset_bottom = 635.0
 theme_override_font_sizes/font_size = 80
+
+[node name="IndexButtonLabel" type="RichTextLabel" parent="IndexButton" unique_id=2128340544]
+layout_mode = 0
+offset_right = 394.0
+offset_bottom = 124.0
+mouse_filter = 1
+theme_override_font_sizes/normal_font_size = 80
 text = "Rock-Dex"
+fit_content = true
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="LineEdit" type="LineEdit" parent="." unique_id=981712906]
 layout_mode = 0
@@ -29,3 +38,35 @@ offset_right = -694.0
 offset_bottom = 635.0
 theme_override_font_sizes/font_size = 40
 placeholder_text = "Enter Codes Here..."
+
+[node name="CaseWarning" type="RichTextLabel" parent="LineEdit" unique_id=970632956]
+layout_mode = 0
+offset_left = 82.0
+offset_top = -54.0
+offset_right = 316.0
+offset_bottom = -1.0
+theme_override_font_sizes/normal_font_size = 30
+text = "Case Sensitive"
+horizontal_alignment = 1
+
+[node name="UIProgress" type="Label" parent="." unique_id=1580013718]
+layout_mode = 0
+offset_left = 946.0
+offset_top = 526.0
+offset_right = 1114.0
+offset_bottom = 609.0
+theme_override_font_sizes/font_size = 60
+text = "00/00"
+
+[node name="Congratulations" type="RichTextLabel" parent="." unique_id=680349678]
+visible = false
+visibility_layer = 512
+z_index = 20
+layout_mode = 0
+offset_left = -1003.0
+offset_top = -600.0
+offset_right = 1008.0
+offset_bottom = -368.0
+theme_override_font_sizes/normal_font_size = 150
+text = "You collected all the rocks!"
+horizontal_alignment = 1

@@ -6,10 +6,14 @@
 [ext_resource type="Texture2D" uid="uid://d02ik5j8d1fj4" path="res://Screenshot 2025-03-10 235007.png" id="3_gyfs4"]
 [ext_resource type="Script" uid="uid://rdmvnp83mat1" path="res://camera_2d.gd" id="3_hq1ik"]
 [ext_resource type="PackedScene" uid="uid://8u08r54j4wu7" path="res://game_ui.tscn" id="5_8mm7a"]
+[ext_resource type="Script" uid="uid://40k5ba2pcb3u" path="res://ui_progress.gd" id="6_66tet"]
 [ext_resource type="PackedScene" uid="uid://ulcpfp7hk8qd" path="res://menu.tscn" id="7_nfk4m"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_g4gaj"]
 size = Vector2(21, 675)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_66tet"]
+size = Vector2(119, 11)
 
 [sub_resource type="BoxMesh" id="BoxMesh_ra2i3"]
 
@@ -47,6 +51,9 @@ size = Vector2(128, 128)
 
 [sub_resource type="SphereMesh" id="SphereMesh_ra2i3"]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4liu5"]
+size = Vector2(144, 102)
+
 [node name="Node2D" type="Node2D" unique_id=236159428]
 
 [node name="StaticBodyFolder" type="Node" parent="." unique_id=2091817908]
@@ -56,6 +63,14 @@ size = Vector2(128, 128)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBodyFolder/StaticBody2D" unique_id=2027653812]
 position = Vector2(0.5, 327.5)
 shape = SubResource("RectangleShape2D_g4gaj")
+
+[node name="StaticBody2D3" type="StaticBody2D" parent="StaticBodyFolder" unique_id=526187446]
+position = Vector2(918, -313)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBodyFolder/StaticBody2D3" unique_id=24922544]
+position = Vector2(50, 679)
+shape = SubResource("RectangleShape2D_66tet")
+one_way_collision = true
 
 [node name="StaticBody2D2" type="StaticBody2D" parent="StaticBodyFolder" unique_id=1494731567]
 
@@ -71,7 +86,6 @@ shape = SubResource("RectangleShape2D_2c62f")
 [node name="Player" type="CharacterBody2D" parent="." unique_id=762714921]
 position = Vector2(575, 323)
 script = ExtResource("1_2c62f")
-JUMP_VELOCITY = -800.0
 
 [node name="Sprite2D" type="Sprite2D" parent="Player" unique_id=1784517068]
 position = Vector2(0, 208)
@@ -97,6 +111,12 @@ offset_bottom = 1.3240051
 [node name="IndexButton" parent="Player/GameUi" index="1" unique_id=974243128]
 toggle_mode = true
 action_mode = 0
+
+[node name="CaseWarning" parent="Player/GameUi/LineEdit" parent_id_path=PackedInt32Array(935865849, 981712906) index="0" unique_id=970632956]
+visible = false
+
+[node name="UIProgress" parent="Player/GameUi" index="3" unique_id=1580013718]
+script = ExtResource("6_66tet")
 
 [node name="Menu" parent="Player" unique_id=391373488 instance=ExtResource("7_nfk4m")]
 visible = false
@@ -141,7 +161,14 @@ position = Vector2(286.00003, 391)
 scale = Vector2(155.42578, 144.25002)
 mesh = SubResource("SphereMesh_ra2i3")
 
+[node name="ImpassableWall" type="StaticBody2D" parent="." unique_id=899534431]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ImpassableWall" unique_id=1098727668]
+position = Vector2(920, 559)
+shape = SubResource("RectangleShape2D_4liu5")
+
 [connection signal="toggled" from="Player/GameUi/IndexButton" to="Player" method="_on_index_button_toggled"]
+[connection signal="editing_toggled" from="Player/GameUi/LineEdit" to="Player" method="_on_line_edit_editing_toggled"]
 [connection signal="text_submitted" from="Player/GameUi/LineEdit" to="Player" method="_on_line_edit_text_submitted"]
 [connection signal="pressed" from="Player/Menu/MenuButton" to="Player" method="_on_menu_button_pressed"]
 [connection signal="body_entered" from="RockFolder/Secret1" to="Player" method="_on_secret_1_body_entered"]
